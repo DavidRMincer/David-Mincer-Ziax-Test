@@ -7,6 +7,8 @@ public:
 		z = 0;
 
 	Vector3D();
+	float Magnitude();
+	Vector3D Normalised();
 	~Vector3D();
 };
 
