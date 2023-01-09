@@ -6,6 +6,11 @@ Character::Character()
 {
 }
 
+Character::Character(string name, float speed) : DynamicEntity(speed)
+{
+	_displayName = name;
+}
+
 /*
 	Returns character's name
 */

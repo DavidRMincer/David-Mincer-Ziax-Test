@@ -16,9 +16,14 @@ private:
 
 public:
 	PlayableCharacter();
+	PlayableCharacter(string name, float speed, int maxCoins);
 	ValueController GetCoins();
+	void SetCoins(int value);
+	void AddCoins(int addition);
 	void AddStatController(string name, int min, int max);
 	ValueController GetStat(int index);
+	void SetStat(int index, int value);
+	void AddtoStat(int index, int addition);
 	void RemoveStat(int index);
 	void AddFriend(PlayableCharacter* newFriend);
 	PlayableCharacter GetFriend(int index);

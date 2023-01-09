@@ -5,12 +5,33 @@ PlayableCharacter::PlayableCharacter()
 {
 }
 
+PlayableCharacter::PlayableCharacter(string name, float speed, int maxCoins) : Character(name, speed)
+{
+	_coins.SetRange(0, maxCoins);
+}
+
 /*
 	Returns coin value
 */
 ValueController PlayableCharacter::GetCoins()
 {
 	return _coins;
+}
+
+/*
+	Sets value of the coins
+*/
+void PlayableCharacter::SetCoins(int value)
+{
+	_coins.SetValue(value);
+}
+
+/*
+	Adds to coins
+*/
+void PlayableCharacter::AddCoins(int addition)
+{
+	_coins.AddValue(addition);
 }
 
 /*
@@ -29,6 +50,22 @@ void PlayableCharacter::AddStatController(string name, int min, int max)
 ValueController PlayableCharacter::GetStat(int index)
 {
 	return _stats[index];
+}
+
+/*
+	Changes value of a stat
+*/
+void PlayableCharacter::SetStat(int index, int value)
+{
+	_stats[index].SetValue(value);
+}
+
+/*
+	Add to value of a stat
+*/
+void PlayableCharacter::AddtoStat(int index, int addition)
+{
+	_stats[index].AddValue(addition);
 }
 
 /*
@@ -76,7 +113,7 @@ void PlayableCharacter::RemoveFriend(int index)
 */
 void PlayableCharacter::ReadData()
 {
-	cout << "Name: " << GetName();
+	cout << "Name: " << GetName() << endl;
 	cout << "Coins: " << GetCoins().GetValue() << endl;
 	// Display stats
 	for (int i = 0; i < _stats.size(); i++)

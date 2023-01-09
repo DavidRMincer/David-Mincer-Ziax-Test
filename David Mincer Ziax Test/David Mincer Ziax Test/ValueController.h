@@ -21,6 +21,7 @@ public:
 	int GetValue();
 	void SetValue(int newValue);
 	void AddValue(int addition);
+	void SetRange(int min, int max);
 	~ValueController();
 };
 

@@ -12,6 +12,7 @@ private:
 
 public:
 	Character();
+	Character(string name, float speed);
 	string GetName();
 	void SetName(string newName);
 	~Character();

@@ -6,6 +6,11 @@ DynamicEntity::DynamicEntity()
 {
 }
 
+DynamicEntity::DynamicEntity(float speed)
+{
+	_speed = speed;
+}
+
 /*
 	Returns speed
 */

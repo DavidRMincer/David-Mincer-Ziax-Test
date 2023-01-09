@@ -73,6 +73,15 @@ void ValueController::AddValue(int addition)
 	KeepValueWithinRange();
 }
 
+/*
+	Sets minimum and maximum values
+*/
+void ValueController::SetRange(int min, int max)
+{
+	_minValue = min;
+	_maxValue = max;
+}
+
 
 ValueController::~ValueController()
 {
