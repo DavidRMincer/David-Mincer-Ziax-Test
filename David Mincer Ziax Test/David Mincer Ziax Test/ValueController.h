@@ -15,6 +15,7 @@ private:
 
 public:
 	ValueController();
+	ValueController(string name, int min, int max);
 	string GetName();
 	void SetName(string newName);
 	int GetValue();

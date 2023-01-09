@@ -18,6 +18,18 @@ ValueController::ValueController()
 }
 
 /*
+	Custom constructor
+*/
+ValueController::ValueController(string name, int min, int max)
+{
+	_name = name;
+	_minValue = min;
+	_maxValue = max;
+
+	_currentValue = min;
+}
+
+/*
 	Returns name of value
 */
 string ValueController::GetName()
